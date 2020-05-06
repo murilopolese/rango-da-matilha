@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+body {
+	background: #FFFEF8;
+	color: #4A4037;
+	font-family: 'lato';
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+}
+@media (min-width: 760px) {
+	img.image-exception {
+		max-width: 140%;
+	}
+}
+
+h2 {
+	font-size: 50px;
+	line-height: 1.2em;
+	font-weight: 300;
+}
+h2 em {
+	color: #F48884;
+}
+h2 strong {
+	display: inline-block;
+	background: #4A4037;
+	color: #FFFEF8;
+	border-radius: 1em;
+	padding: 0 0.3em;
+	font-weight: 300;
+}
+h3 {
+	color: #F48884;
+	font-size: 48px;
+	font-weight: bold;
+}
+h3 em {
+	color: #F89E32;
+}
+@media (max-width: 1000px) {
+  body {
+		text-align: center;
+	}
+}
+
+.container {
+	max-width: 860px;
+}
+
+.full-screen {
+	width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.frame-top {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('images/bg_moldura.png');
+	transform: scale(1.2);
+	opacity: 1;
+	transition: 0.3s;
+}
+@media (max-width: 1000px) {
+  .frame-top {
+		opacity: 0;
+  }
+}
+.frame-side {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('images/bg_moldura2.png');
+	transform: scale(1.2);
+	opacity: 1;
+	transition: 0.3s;
+}
+@media (max-width: 1000px) {
+  .frame-side {
+		opacity: 0;
+  }
+}
+
+.background-paper {
+	background-size: cover;
+	background-image: url('images/bg_papelreciclado.png')
+}
