@@ -83,15 +83,12 @@ img {
 	font-weight: 700;
 	line-height: 1em;
 }
-.body-text {
-	display: inline-block;
-	font-size: 1em;
-}
 .pre-title {
 	display: inline-block;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: 300;
 }
+
 
 .pink {
 	color: var(--primary)
@@ -252,9 +249,6 @@ img {
 	#step-by-step .content figure {
 		width: 50%;
 		vertical-align: center;
-	}
-	#step-by-step .content img {
-
 	}
 }
 
