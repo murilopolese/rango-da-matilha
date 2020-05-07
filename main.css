@@ -257,6 +257,9 @@ img {
 	margin: 0 auto;
 	width: 90%;
 }
+#faq .content .question {
+	margin: 3em 0;
+}
 #faq .content figure {
 	margin: 0;
 }
