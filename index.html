@@ -3,211 +3,234 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Rango da Matilha: Alimentacao natural para pets</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 		<link rel="stylesheet" href="main.css">
+		<link rel="shortcut icon" href="images/logo_icon.png">
 	</head>
 	<body>
-		<!-- COVER -->
-		<div class="full-screen background-paper">
-			<div class="frame-top"></div>
-			<div class="container mt-5">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-sm-12 text-center my-5">
-						<img src="images/logo.png" alt="Logo da empresa" />
-					</div>
-					<div class="col-sm-12 col-lg-9">
-						<h2>
-							Isso mesmo, <br/> comida de verdade.
-							<em>Personalizada & balanceada</em> <br/>
-							para o <strong>seu cachorro</strong>
-						</h2>
-					</div>
-					<div class="col-sm-4 col-lg-3">
-						<img class="my-4" src="images/selo_MAPA.png" alt="Selo MAPA" />
-					</div>
-				</div>
+		<!-- CAPA -->
+		<div id="cover">
+			<!-- LOGO -->
+			<div class="logo">
+				<h1>
+					<img src="images/logo.png" alt="Logo da empresa" />
+				</h1>
+			</div>
+			<!-- TAGLINE -->
+			<div class="tagline">
+				<span class="big-text">
+					Isso mesmo, <br/> comida de verdade. <br />
+					<em>Personalizada & <br/> balanceada</em> <br/>
+					para o <strong>seu cachorro</strong>
+				</span>
+				<img class="stamp" src="images/selo_MAPA.png" alt="Selo MAPA" />
 			</div>
 		</div>
+
 		<!-- FOTO DO PRODUTO -->
-		<div>
+		<div id="product-photo">
 			<img src="images/foto_rango.png" alt="Foto do produto" />
 		</div>
 
-		<div class="full-screen">
-			<div class="frame-side"></div>
-			<div class="container mt-5">
-				<!-- INFORMACOES RELEVANTES SOBRE O PRODUTO -->
-				<div class="row text-center mb-5">
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<figure class="px-5">
-							<img src="images/icone_congelado.png" />
-						</figure>
-						<h4>Porcao congelada e embalada a vacuo</h4>
-						<p>
-							<strong>E so descongelar</strong> a porcao diaria na parte na
-							parte baixa da geladeira e servir em 2 ou 3 refeicoes. Pode
-							servir gelada ou morninha.
-						<p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<figure class="px-5">
-							<img src="images/icone_vegetais.png" />
-						</figure>
-						<h4>Vegetais da feira</h4>
-						<p>
-							Vegetais selecionados e combinados de maneira
-							<strong>nutritiva e segura</strong>
-							para garantir todos os nutrientes para o seu cachorro.
-						<p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<figure class="px-5">
-							<img src="images/icone_congelado.png" />
-						</figure>
-						<h4>Carne Fresca do Acougue</h4>
-						<p>
-							Uma ampla variedade de
-							<strong>proteinas de diferentes animais</strong>,
-							para atender necessidades dos peludos mais exigentes.
-						<p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<figure class="px-5">
-							<img src="images/icone_entregas.png" />
-						</figure>
-						<h4>Delivery em toda grande vitoria</h4>
-						<p>
-							Chega na sua casa em dias fixos de entrega. Antes de acabar, nos
-							renovaremos o seu estoque de rango. Voce tambem pode <strong>agendar
-							uma entrega</strong> em horario especial na sua casa.
-						<p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<figure class="px-5">
-							<img src="images/icone_conservantes.png" />
-						</figure>
-						<h4>Livre de conservantes, corantes e outros</h4>
-						<p>
-							Palatabilizantes, transgenicos, antidioxidantes, antiumectantes e
-							outros palavroes voce so vai ver aqui,
-							<strong>em nosso produto, nao</strong>.
-						<p>
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<figure class="px-5">
-							<img src="images/icone_veterinario.png" />
-						</figure>
-						<h4>Supervisao Veterinaria</h4>
-						<p>
-							Uma super <strong>veterinaria</strong> na equipe para
-							<strong>balancear</strong> as dietas e garantir que todos os
-							processos e ingredientes sao <strong>adequados</strong> para os
-							dogs.
-						<p>
-					</div>
+		<!-- INFORMACOES RELEVANTES SOBRE O PRODUTO -->
+		<div id="product-info">
+			<div class="content">
+				<div class="info">
+					<figure>
+						<img src="images/icone_congelado.png" />
+					</figure>
+					<h3 class="title">Porcao congelada e embalada a vacuo</h3>
+					<p>
+						<strong>E so descongelar</strong> a porcao diaria na parte na
+						parte baixa da geladeira e servir em 2 ou 3 refeicoes. Pode
+						servir gelada ou morninha.
+					</p>
 				</div>
-				<!-- REFORCO DO POSICIONAMENTO -->
-				<div class="row mb-5">
-					<div class="col-xs-12 col-md-8">
-						<h2>
-							Seu cachorro e <em>unico</em>.
-							E nos temos uma receita <em>adequada</em> para ele.
-						</h2>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<img class="image-exception" src="images/foto_cachorro_redondo.png" alt="Foto de um cachorro"/>
-					</div>
-					<div class="col-md-10 offset-md-1 mt-md-n5 mt-sm-5">
-						<h3>
-							+ de 40 receitas <br/> testadas e aprovadas.
-						</h3>
-					</div>
-					<div class="col-md-12 text-right">
-						<h3>
-							<em>Voce recebe uma <br /> receita a cada entrega.</em>
-						</h3>
-					</div>
+				<div class="info">
+					<figure>
+						<img src="images/icone_vegetais.png" />
+					</figure>
+					<h3 class="title">Vegetais da feira</h3>
+					<p>
+						Vegetais selecionados e combinados de maneira
+						<strong>nutritiva e segura</strong>
+						para garantir todos os nutrientes para o seu cachorro.
+					</p>
 				</div>
-				<!-- PASSO A PASSO -->
-				<div class="row text-center">
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<figure class="mb-5">
-							<img width="120" src="images/step_formulario.png" />
-						</figure>
-						<p>
-							Preencha o <a href="#" target="_blank">formulario</a> com as
-							informacoes do seu caozinho
-						<p>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<figure class="mb-5">
-							<img width="90" src="images/step_calculadora.png" />
-						</figure>
-						<p>
-							Nossa equipe vai calcular a <strong>porcao diaria
-							de rango</strong> e escolher as receitas mais adequadas
-						<p>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<figure class="mb-5">
-							<img width="120" src="images/step_whatsapp.png" />
-						</figure>
-						<p>
-							Voce recebera um orcamento por whatsapp com opcoes do combo
-							15 ou 30 porcoes
-						<p>
-					</div>
+				<div class="info">
+					<figure>
+						<img src="images/icone_bovino.png" />
+					</figure>
+					<h3 class="title">Carne Fresca do Acougue</h3>
+					<p>
+						Uma ampla variedade de
+						<strong>proteinas de diferentes animais</strong>,
+						para atender necessidades dos peludos mais exigentes.
+					</p>
+				</div>
+				<div class="info">
+					<figure>
+						<img src="images/icone_entregas.png" />
+					</figure>
+					<h3 class="title">Delivery em toda grande vitoria</h3>
+					<p>
+						Chega na sua casa em dias fixos de entrega. Antes de acabar, nos
+						renovaremos o seu estoque de rango. Voce tambem pode <strong>agendar
+						uma entrega</strong> em horario especial na sua casa.
+					</p>
+				</div>
+				<div class="info">
+					<figure>
+						<img src="images/icone_conservantes.png" />
+					</figure>
+					<h3 class="title">Livre de conservantes, corantes e outros</h3>
+					<p>
+						Palatabilizantes, transgenicos, antidioxidantes, antiumectantes e
+						outros palavroes voce so vai ver aqui,
+						<strong>em nosso produto, nao</strong>.
+					</p>
+				</div>
+				<div class="info">
+				<figure>
+					<img src="images/icone_veterinario.png" />
+				</figure>
+				<h3 class="title">Supervisao Veterinaria</h3>
+				<p>
+					Uma super <strong>veterinaria</strong> na equipe para
+					<strong>balancear</strong> as dietas e garantir que todos os
+					processos e ingredientes sao <strong>adequados</strong> para os
+					dogs.
+				</p>
+			</div>
+			</div>
+		</div>
+
+		<!-- REFORCO DO POSICIONAMENTO -->
+		<div id="positioning">
+			<h2 class="big-text">
+				Seu cachorro e <em>unico</em>.
+				E nos temos uma receita <em>adequada</em> para ele
+			</h2>
+			<figure class="dog">
+				<img src="images/foto_cachorro_redondo.png" alt="Foto de um cachorro"/>
+			</figure>
+			<span class="big-bold-text pink">
+				+ de 40 receitas <br/> testadas e aprovadas
+			</span>
+			<span class="big-bold-text yellow">
+				Voce recebe uma <br /> receita a cada entrega
+			</span>
+		</div>
+
+		<!-- PASSO A PASSO -->
+		<div id="step-by-step">
+			<div class="content">
+				<div class="step">
+					<figure>
+						<img src="images/step_formulario.png" />
+					</figure>
+					<p>
+						Preencha o <a href="#" target="_blank">formulario</a> com as
+						informacoes do seu caozinho
+					<p>
+				</div>
+				<div class="step">
+					<figure>
+						<img src="images/step_calculadora.png" />
+					</figure>
+					<p>
+						Nossa equipe vai calcular a <strong>porcao diaria
+						de rango</strong> e escolher as receitas mais adequadas
+					<p>
+				</div>
+				<div class="step">
+					<figure>
+						<img src="images/step_whatsapp.png" />
+					</figure>
+					<p>
+						Voce recebera um orcamento por whatsapp com opcoes do combo
+						15 ou 30 porcoes
+					<p>
+				</div>
+				<div class="step">
+					<figure>
+						<img src="images/step_pagamento.png" />
+					</figure>
+					<p>
+						Voce realiza o pagamento via
+						<strong>boleto, picpay ou transferencia</strong>
+					<p>
+				</div>
+				<div class="step">
+					<figure>
+						<img src="images/step_cozinhando.png" />
+					</figure>
+					<p>
+						Nos produzimos o rango <strong>personalizado</strong> para seu
+						caozinho e </strong>entregamos congelado</strong> na sua casa.
+					<p>
+				</div>
+				<div class="step">
+					<figure>
+						<img src="images/step_comida.png" />
+					</figure>
+					<p>
+						Voce so precisa descongelar e servir para o seu caozinho! Antes de
+						acabar, entraremos em contato para agendar uma nova entrega.
+					<p>
 				</div>
 			</div>
 		</div>
 
-		<div class="container">
-			<!-- FAQ -->
-			<div class="row mt-5">
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<h5>Meu caozinho esta</h5>
-					<figure class="px-5">
+		<!-- FAQ -->
+		<div id="faq">
+			<div class="content">
+				<div class="question">
+					<span class="pre-title">Meu caozinho esta</span>
+					<figure>
 						<img src="images/fora_do_peso.png" alt="Fora do peso" />
 					</figure>
 					<p>
-						<span>R:</span> Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud.
+						<span class="blue">R:</span> Temos receitas
+						<strong>com cortes magros e sem carboidratos</strong>.
+							Alem disso, as porcoes sao calculadas para que seu
+							cao <strong>perca peso de maneira nutritiva e saudavel!</strong>
 					<p>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<h5>Meu caozinho esta</h5>
-					<figure class="px-5">
-						<img src="images/fora_do_peso.png" alt="Fora do peso" />
+				<div class="question">
+					<span class="pre-title">Ele vive com</span>
+					<figure>
+						<img src="images/alergias.png" alt="Alergias" />
 					</figure>
 					<p>
-						<span>R:</span> Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud.
+						<span class="blue">R:</span> Trabalhamos com uma grande
+						<strong>variedade de ingredientes</strong> para contornar essa situacao.
+						Se nao tivermos uma receita que se encaixe para ele,
+						<strong>nos iremos inventa-la!</strong>
+						(Com o aval de um veterinario, e claro!)
 					<p>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<h5>Meu caozinho esta</h5>
-					<figure class="px-5">
-						<img src="images/fora_do_peso.png" alt="Fora do peso" />
+				<div class="question">
+					<span class="pre-title">Esta sempre</span>
+					<figure>
+						<img src="images/apetite.png" alt="Sem apetite" />
 					</figure>
 					<p>
-						<span>R:</span> Lorem ipsum dolor sit amet, consectetur adipisicing
-						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua. Ut enim ad minim veniam, quis nostrud.
+						<span class="blue">R:</span> Mas sempre quer comer da sua comida, certo?
+						O problema e que ela nao e segura para ele. O rango e
+						<strong>comida de verdade como a sua</strong>, mas balanceada
+						especificamente para o seu cachorro!
 					<p>
 				</div>
 			</div>
-			<!-- CALL TO ACTION -->
-			<div class="row text-center">
-				<div class="col-xs-12 col-sm-6 offset-sm-3">
-					<h2>
-						Peca o seu orcamento pelo Whatsapp clicando no link do perfil
-						ou entre em contato direto pelo 27 999050033
-					</h2>
-				</div>
-			</div>
+		</div>
+
+		<!-- CALL TO ACTION -->
+		<div id="call-to-action">
+			<h2 class="big-text text-center">
+				Peca o seu orcamento pelo Whatsapp clicando no link do perfil
+				ou entre em contato direto pelo 27 999050033
+			</h2>
 		</div>
 
 	</body>
