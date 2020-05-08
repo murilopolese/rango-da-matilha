@@ -103,7 +103,55 @@ img {
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 
+.wrapper {
+	position: relative;
+
+}
+.cover.wrapper {
+	z-index: -2;
+	background-size: cover;
+	background-image: url('images/bg_papelreciclado.png');
+	background-repeat: no-repeat;
+}
+.margin {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	width: 15%;
+	background-size: contain;
+	background-image: url('images/bg_moldura_loop.png');
+	background-repeat: repeat-y;
+	transition: 1s;
+}
+.margin.top {
+	height: 32em;
+	left: 12%;
+	right: 12%;
+	width: 75%;
+	background-image: url('images/bg_moldura.png');
+	background-repeat: no-repeat;
+}
+.margin.left {
+	bottom: 0;
+	left: 0;
+}
+.margin.right {
+	bottom: 0;
+	right: 0;
+	transform: scaleX(-1);
+	background-position: 0 -4em;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.margin-left {
+		left: 0;
+	}
+	.margin-right {
+		right: 0;
+	}
+}
 #cover {
+	position: relative;
 	width: 100%;
 	min-height: 100vh;
 	max-width: 80vw;
@@ -116,6 +164,8 @@ img {
 	margin: 1em auto;
 }
 #cover .tagline {
+	opacity: 1;
+	transition: 1s;
 	text-align: center;
 	padding: 0 0 1em 0;
 }
@@ -190,6 +240,7 @@ img {
  width: 80%;
  margin: 0 auto;
  text-align: center;
+ padding-bottom: 4em;
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -201,6 +252,7 @@ img {
 		width: 40%;
 	}
 	#positioning .big-text {
+		background: var(--white);
 		margin-top: 2em;
 		width: 45%;
 		text-align: left;
@@ -275,4 +327,13 @@ img {
 		max-width: 25%;
 		padding: 0 1em;
 	}
+}
+
+.reveal {
+	opacity: 1;
+	transition: 1s;
+}
+*[data-visible="false"] {
+	opacity: 0 !important;
+	transform: translateY(4em);
 }
