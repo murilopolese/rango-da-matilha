@@ -1,0 +1,481 @@
+
+  <!DOCTYPE html>
+  <html lang="pt-br" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <title>Rango da Matilha</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary: #F48884;
+  --secondary: #F89E32;
+  --accent: #02AFEE;
+	--black: #4A4037;
+	--white: #FFFEF8;
+}
+
+body {
+  font-family: 'Lato';
+  margin: 0;
+}
+
+/* MENU */
+
+#menu {
+  /* CLEAR */
+  list-style: none;
+  padding: 0 0.5em;
+  margin: 0;
+  /* LAYOUT */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#menu .logo {
+  width: 80%;
+  margin: 1em auto;
+  text-align: center;
+}
+#menu a:link,
+#menu a:hover,
+#menu a:active,
+#menu a:visited {
+  /* CLEAR */
+  color: black;
+  text-decoration: none;
+}
+#menu .link {
+  /* LAYOUT */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: min(22px, 6vw);
+  margin: 0.5em 0;
+  height: 1em;
+}
+#menu .link .icon {
+  width: 1.8em;
+  height: 1.8em;
+}
+#menu img {
+  max-width: 100%;
+}
+#menu .selo {
+  margin: 1em 0;
+  max-width: 150px;
+}
+#menu li .pink {
+  background: salmon;
+  color: white;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+  #menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: white;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  #menu .logo {
+    width: 30%;
+    margin: 0;
+  }
+  #menu .selo {
+    width: 8%;
+  }
+  #menu .link {
+    font-size: min(18px, 1.5vw);
+  }
+}
+
+/* VITRINE */
+
+#vitrine {
+  width: 100%;
+}
+#vitrine img {
+  max-width: 100%;
+}
+#vitrine .texto {
+  font-weight: 300;
+  font-size: 7vw;
+  padding: 0 1em;
+}
+#vitrine .texto em {
+  color: salmon;
+  font-style: normal;
+}
+#vitrine .texto strong {
+  background: black;
+  color: white;
+  padding: 0.1em 0.2em;
+  border-radius: 1em;
+  display: inline-block;
+}
+
+@media screen and (min-width: 600px) {
+  #vitrine {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-betwen;
+    align-items: center;
+  }
+  #vitrine .texto,
+  #vitrine .imagem {
+    width: 50%;
+  }
+  #vitrine .texto {
+    font-size: min(36px, 3.2vw);
+  }
+}
+
+/* PRODUTO */
+
+#produto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#produto .item {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#produto .item .icon {
+  width: 50%;
+  margin: 0 auto;
+}
+#produto .item h3 {
+  font-weight: bold;
+  line-height: 1em;
+}
+#produto .item p {
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  #produto {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  #produto .item {
+    width: 33%;
+    padding: 1em;
+  }
+}
+
+/* REFORCO */
+
+#reforco {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: min(42px, 4.5vw);
+  text-align: right;
+  overflow: hidden;
+  margin: auto;
+}
+#reforco img {
+  width: 40%;
+  shape-outside: circle(50%);
+  float: right;
+  padding: 0.3em 0 0 1em;
+}
+#reforco p {
+  margin: 0.6em 0 0.9em 0;
+  padding: 0;
+  line-height: 1em;
+  font-weight: 300;
+}
+#reforco span {
+  font-weight: bold;
+}
+
+#reforco em,
+#reforco .pink {
+  color: salmon;
+  font-style: normal;
+}
+#reforco .orange {
+  color: orange;
+}
+
+@media screen and (max-width: 600px) {
+  #reforco {
+    text-align: center;
+  }
+  #reforco img {
+    width: 80%;
+    float: none;
+    padding: 0;
+  }
+}
+
+/* PASSOS */
+#passos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#passos .item {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#passos .item .icon {
+  width: 50%;
+  margin: 0 auto;
+}
+#passos .item h3 {
+  font-weight: bold;
+  line-height: 1em;
+}
+#passos .item p {
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  #passos {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  #passos .item {
+    width: 33%;
+    padding: 1em;
+  }
+}
+
+/* PERGUNTAS */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary: #F48884;
+  --secondary: #F89E32;
+  --accent: #02AFEE;
+	--black: #4A4037;
+	--white: #FFFEF8;
+}
+
+body {
+  font-family: 'Lato';
+  margin: 0;
+}
+
+
+#perguntas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#perguntas .item {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#perguntas .item .icon {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#perguntas .item p {
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+#perguntas .item p span {
+  color: darkturquoise;
+  font-weight: bold;
+  margin-right: 0.2em;
+}
+
+@media screen and (min-width: 600px) {
+  #perguntas {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  #perguntas .item {
+    width: 33%;
+    padding: 1em;
+  }
+}
+</style>
+  </head>
+  <body>
+  
+    <div id="rango">
+      <noscript>No script</noscript>
+      
+    <div id="capa">
+      <h1 style="display:none">Rango da Matilha: Alimentação Natural para Pets</h1>
+      
+    <ul id="menu">
+      <li class="logo">
+        <img src="logo.png" alt="Rango da Matilha: Alimentação Natural para Pets" />
+      </li>
+      <li class="link"><a  class="pink" href="#orcamento">Orçamento</a></li>
+      <li class="link"><a href="#como-funciona">Como funciona</a></li>
+      <li class="link"><a href="#duvidas">Dúvidas</a></li>
+      <li class="link">
+        <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">Whatsapp</a>
+        <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">
+          <img class="icon" src="3_WHATS.svg" alt="Whatsapp" />
+        </a>
+      </li>
+      <li class="selo">
+        <img src="selo_MAPA.png" alt="Selo do MAPA" />
+      </li>
+    </ul>
+    
+      
+      <div id="vitrine">
+        <div class="texto">
+          <p>
+            ISSO MESMO,<br>
+            COMIDA DE VERDADE.<br>
+            <em>
+            PERSONALIZADA &<br>
+            BALANCEADA<br>
+            </em>
+            PARA O <strong>SEU CACHORRO</strong><br>
+          </p>
+        </div>
+        <div class="imagem">
+          <img src="foto_rango.png" alt="Foto do rango: Proteínas, Carboidratos, Vísceras, Vegetais e Suplementos" />
+        </div>
+      </div>
+    
+    </div>
+  
+      
+    <div id="produto">
+      
+    <div class="item">
+      <img class="icon" src="produto_congelado.svg" alt="PORÇÃO CONGELADA E EMBALADA A VÁCUO" />
+      <h3>PORÇÃO CONGELADA E EMBALADA A VÁCUO</h3>
+      <p>É SÓ DESCONGELAR A PORÇÃO DIÁRIA NA PARTE BAIXA DA GELADEIRA E SERVIR EM 2 OU 3 REFEIÇÕES. PODE SERVIR GELADA OU MORNINHA.</p>
+    </div>
+    
+    <div class="item">
+      <img class="icon" src="produto_vegetais.svg" alt="VEGETAIS DA FEIRA" />
+      <h3>VEGETAIS DA FEIRA</h3>
+      <p>VEGETAIS SELECIONADOS E COMBINADOS DE MANEIRA NUTRITIVA E SEGURA PARA GARANTIR TODOS OS NUTRIENTES PARA O SEU CACHORRO.</p>
+    </div>
+    
+    <div class="item">
+      <img class="icon" src="produto_carne.svg" alt="CARNE FRESCA DO AÇOUGUE" />
+      <h3>CARNE FRESCA DO AÇOUGUE</h3>
+      <p>UMA AMPLA VARIEDADE DE PROTEÍNAS DE DIFERENTES ANIMAIS, PARA ATENDER NECESSIDADES DOS PELUDOS MAIS EXIGENTES.</p>
+    </div>
+    
+    <div class="item">
+      <img class="icon" src="produto_delivery.svg" alt="DELIVERY EM TODA GRANDE VITÓRIA" />
+      <h3>DELIVERY EM TODA GRANDE VITÓRIA</h3>
+      <p>CHEGA NA SUA CASA EM DIAS FIXOS DE ENTREGA. ANTES DE ACABAR, NÓS RENOVAREMOS O SEU ESTOQUE DE RANGO. VOCÊ TAMBÉM PODE AGENDAR UMA ENTREGA EM HORÁRIO ESPECIAL NA SUA CASA.</p>
+    </div>
+    
+    <div class="item">
+      <img class="icon" src="produto_sem_conservante.svg" alt="LIVRE DE CONSERVANTES, CORANTES E OUTROS" />
+      <h3>LIVRE DE CONSERVANTES, CORANTES E OUTROS</h3>
+      <p>PALATABILIZANTES, TRANSGÊNICOS, ANTIDIOXIDANTES, ANTIUMECTANTES E OUTROS PALAVRÕES VOCÊ SÓ VAI VER AQUI. EM NOSSO PRODUTO, NÃO.</p>
+    </div>
+    
+    <div class="item">
+      <img class="icon" src="produto_veterinaria.svg" alt="SUPERVISÃO VETERINÁRIA" />
+      <h3>SUPERVISÃO VETERINÁRIA</h3>
+      <p>UMA SUPER VETERINÁRIA NA EQUIPE PARA BALANCEAR AS DIETAS E GARANTIR QUE TODOS OS PROCESSOS E INGREDIENTES SÃO ADEQUADOS PARA OS DOGS.</p>
+    </div>
+    
+    </div>
+  
+      
+  <div id="reforco">
+    <img src="foto_cachorro_redondo.png" alt="Beagle"/>
+    <p>
+      SEU CACHORRO É <em>ÚNICO</em>.<br>
+      E NÓS TEMOS UMA RECEITA ADEQUADA PARA ELE.
+    </p>
+    <p>
+      <span class="pink">+ DE 40 RECEITAS TESTADAS E APROVADAS</span> <br>
+      <span class="orange">VOCÊ RECEBE UMA RECEITA A CADA ENTREGA</span>
+    </p>
+  </div>
+  
+      
+    <div id="passos">
+      
+      <div class="item">
+        <img class="icon" src="1_FORM.svg" alt="" />
+        <p>PREENCHA O FORMULÁRIO COM AS INFORMAÇÕES DO SEU CÃOZINHO</p>
+      </div>
+    
+      <div class="item">
+        <img class="icon" src="2_CALC.svg" alt="" />
+        <p>NOSSA EQUIPE VAI CALCULAR A PORÇÃO DIÁRIA DE RANGO E ESCOLHER AS RECEITAS MAIS ADEQUADAS</p>
+      </div>
+    
+      <div class="item">
+        <img class="icon" src="3_WHATS.svg" alt="" />
+        <p>VOCÊ RECEBERÁ UM ORÇAMENTO POR WHATSAPP COM OPÇÕES DO COMBO 15 OU 30 PORÇÕES</p>
+      </div>
+    
+      <div class="item">
+        <img class="icon" src="4_PGTO.svg" alt="" />
+        <p>VOCÊ REALIZA O PAGAMENTO VIA BOLETO, PICPAY OU TRANSFERÊNCIA</p>
+      </div>
+    
+      <div class="item">
+        <img class="icon" src="5_PANELA.svg" alt="" />
+        <p>NÓS PRODUZIMOS O RANGO PERSONALIZADO PARA SEU CÃOZINHO E ENTREGAMOS CONGELADO NA SUA CASA.</p>
+      </div>
+    
+      <div class="item">
+        <img class="icon" src="6_POTECOMIDA.svg" alt="" />
+        <p>VOCÊ SÓ PRECISA DESCONGELAR E SERVIR PARA O SEU CÃOZINHO! ANTES DE ACABAR, ENTRAREMOS EM CONTATO PARA AGENDAR UMA NOVA ENTREGA.</p>
+      </div>
+    
+    </div>
+  
+      
+    <div id="perguntas">
+      
+      <div class="item">
+        <img src="fora_do_peso.svg" alt="" />
+        <p><span>R:</span>TEMOS RECEITAS COM CORTES MAGROS E SEM CARBOIDRATOS. ALÉM DISSO, AS PORÇÕES SÃO CALCULADAS PARA QUE SEU CÃO PERCA PESO DE MANEIRA NUTRITIVA E SAUDÁVEL!</p>
+      </div>
+    
+      <div class="item">
+        <img src="alergias.svg" alt="" />
+        <p><span>R:</span>TRABALHAMOS COM UMA GRANDE VARIEDADE DE INGREDIENTES PARA CONTORNAR ESSA SITUAÇÃO. SE NÃO TIVERMOS UMA RECEITA QUE SE ENCAIXE PARA ELE, NÓS IREMOS INVENTÁ-LA! (COM O AVAL DE UM VETERINÁRIO, É CLARO!)</p>
+      </div>
+    
+      <div class="item">
+        <img src="sem_apetite.svg" alt="" />
+        <p><span>R:</span>MAS SEMPRE QUER COMER DA SUA COMIDA, CERTO? O PROBLEMA É QUE ELA NÃO E SEGURA PARA ELE. O RANGO É COMIDA DE VERDADE COMO A SUA, MAS BALANCEADA ESPECIFICAMENTE PARA O SEU CACHORRO!</p>
+      </div>
+    
+    </div>
+  
+      
+    </div>
+  
+  </body>
+  </html>
+  
