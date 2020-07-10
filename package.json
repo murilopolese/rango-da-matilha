@@ -1,0 +1,31 @@
+{
+  "name": "rango-da-matilha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server -c-1 ./dist",
+    "build": "node build.js",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murilopolese/rango-da-matilha.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murilopolese/rango-da-matilha/issues"
+  },
+  "homepage": "https://github.com/murilopolese/rango-da-matilha#readme",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "choo": "^7.1.0",
+    "gh-pages": "^3.1.0",
+    "http-server": "^0.12.3",
+    "ncp": "^2.0.0",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "watchify": "^3.11.1"
+  }
+}
