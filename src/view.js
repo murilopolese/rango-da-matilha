@@ -10,6 +10,7 @@ module.exports = (state, emit) => {
       ${passoapasso(state, emit)}
       ${perguntas(state, emit)}
       ${contato(state, emit)}
+      ${contatoFlutuante(state, emit)}
     </div>
   `
 }
@@ -159,6 +160,16 @@ function contato() {
     <div id="contato" class="revelar">
       <a class="link" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">
         Solicite um Orçamento
+      </a>
+    </div>
+  `
+}
+
+function contatoFlutuante() {
+  return html`
+    <div id="flutuante">
+      <a class="link" href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">
+        <img src="3_WHATS.svg" />
       </a>
     </div>
   `

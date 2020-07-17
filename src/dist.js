@@ -2309,11 +2309,6 @@ const scan = function() {
 }
 
 window.onload = function() {
-  // const articles = document.querySelectorAll('.revelar')
-  // // Hide all articles
-  // for (let i = 0; i < articles.length; i++) {
-  //   articles[i].setAttribute('data-visivel', false)
-  // }
   scan()
   window.addEventListener('scroll', scan)
   window.addEventListener('resize', scan)
@@ -2332,6 +2327,7 @@ module.exports = (state, emit) => {
       ${passoapasso(state, emit)}
       ${perguntas(state, emit)}
       ${contato(state, emit)}
+      ${contatoFlutuante(state, emit)}
     </div>
   `
 }
@@ -2481,6 +2477,16 @@ function contato() {
     <div id="contato" class="revelar">
       <a class="link" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">
         Solicite um Orçamento
+      </a>
+    </div>
+  `
+}
+
+function contatoFlutuante() {
+  return html`
+    <div id="flutuante">
+      <a class="link" href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">
+        <img src="3_WHATS.svg" />
       </a>
     </div>
   `

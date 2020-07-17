@@ -38,8 +38,11 @@ a:active {
 	transform: translateY(4em);
 }
 
-/* MENU */
+#rango {
+  position: relative;
+}
 
+/* MENU */
 #menu {
   /* CLEAR */
   list-style: none;
@@ -63,6 +66,7 @@ a:active {
   /* CLEAR */
   color: var(--black);
   text-decoration: none;
+  transition: all 0.1s;
 }
 #menu .link {
   /* LAYOUT */
@@ -75,6 +79,9 @@ a:active {
   font-size: min(22px, 6vw);
   margin: 0.5em 0;
   height: 1em;
+}
+#menu .pink:hover {
+  transform: scale(1.05);
 }
 #menu .link .icone {
   width: 1.8em;
@@ -362,4 +369,11 @@ a:active {
 }
 #contato .link:hover {
   transform: scale(1.05);
+}
+
+#flutuante {
+  position: fixed;
+  bottom: 3%;
+  right: 1%;
+  width: min(100px, 20%);
 }

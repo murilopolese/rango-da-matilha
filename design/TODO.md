@@ -8,3 +8,4 @@
 
 [ ] Reduzir tamanho das imagens
 [ ] Comprimir resultado final
+[x] Animacao de revelar items na pagina
