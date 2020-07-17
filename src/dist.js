@@ -2301,19 +2301,19 @@ const isInViewport = function (elem) {
     return bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
 };
 const scan = function() {
-  const articles = document.querySelectorAll('.reveal')
+  const articles = document.querySelectorAll('.revelar')
   for (let i = 0; i < articles.length; i++) {
     let article = articles.item(i)
-    article.setAttribute('data-visible', isInViewport(article))
+    article.setAttribute('data-visivel', isInViewport(article))
   }
 }
 
 window.onload = function() {
-  const articles = document.querySelectorAll('.reveal')
-  // Hide all articles
-  for (let i = 0; i < articles.length; i++) {
-    articles[i].setAttribute('data-visible', false)
-  }
+  // const articles = document.querySelectorAll('.revelar')
+  // // Hide all articles
+  // for (let i = 0; i < articles.length; i++) {
+  //   articles[i].setAttribute('data-visivel', false)
+  // }
   scan()
   window.addEventListener('scroll', scan)
   window.addEventListener('resize', scan)
@@ -2409,7 +2409,7 @@ function produto() {
   const items = require('./content/product.json')
   function item(imagem, titulo, texto) {
     return html`
-    <div class="item reveal">
+    <div class="item revelar">
       <img class="icone" src=${imagem} alt=${titulo} />
       <h3>${titulo}</h3>
       <p>${texto}</p>
@@ -2417,7 +2417,7 @@ function produto() {
     `
   }
   return html`
-    <div id="produto" class="reveal">
+    <div id="produto" class="revelar">
       ${items.map((i) => item(i.imagem, i.titulo, i.texto))}
     </div>
   `
@@ -2425,7 +2425,7 @@ function produto() {
 
 function reforco() {
   return html`
-  <div id="reforco" class="reveal">
+  <div id="reforco" class="revelar">
     <img src="foto_cachorro_redondo.png" alt="Beagle"/>
     <p>
       SEU CACHORRO É <em>ÚNICO</em>.<br>
@@ -2443,7 +2443,7 @@ function passoapasso() {
   const items = require('./content/passo-a-passo.json')
   function item(n, imagem, texto, alt) {
     return html`
-      <div class="item reveal">
+      <div class="item revelar">
         <span class="numero">${n}</span>
         <img class="icone" src=${imagem} alt=${alt} />
         <p>${raw(texto)}</p>
@@ -2451,7 +2451,7 @@ function passoapasso() {
     `
   }
   return html`
-    <div id="passos" class="reveal">
+    <div id="passos" class="revelar">
       <h2>Como funciona?</h2>
       ${items.map((i, n) => item(n, i.imagem, i.texto))}
     </div>
@@ -2462,14 +2462,14 @@ function perguntas() {
   const items = require('./content/perguntas.json')
   function item(imagem, texto, alt) {
     return html`
-      <div class="item reveal">
+      <div class="item revelar">
         <img src=${imagem} alt=${alt} />
         <p><span>R:</span>${texto}</p>
       </div>
     `
   }
   return html`
-    <div id="perguntas" class="reveal">
+    <div id="perguntas" class="revelar">
       <h2>Principais Duvidas</h2>
       ${items.map((i) => item(i.imagem, i.texto))}
     </div>
@@ -2478,7 +2478,7 @@ function perguntas() {
 
 function contato() {
   return html`
-    <div id="contato" class="reveal">
+    <div id="contato" class="revelar">
       <a class="link" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">
         Solicite um Orçamento
       </a>

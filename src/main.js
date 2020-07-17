@@ -12,19 +12,14 @@ const isInViewport = function (elem) {
     return bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
 };
 const scan = function() {
-  const articles = document.querySelectorAll('.reveal')
+  const articles = document.querySelectorAll('.revelar')
   for (let i = 0; i < articles.length; i++) {
     let article = articles.item(i)
-    article.setAttribute('data-visible', isInViewport(article))
+    article.setAttribute('data-visivel', isInViewport(article))
   }
 }
 
 window.onload = function() {
-  const articles = document.querySelectorAll('.reveal')
-  // Hide all articles
-  for (let i = 0; i < articles.length; i++) {
-    articles[i].setAttribute('data-visible', false)
-  }
   scan()
   window.addEventListener('scroll', scan)
   window.addEventListener('resize', scan)
