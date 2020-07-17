@@ -2275,6 +2275,7 @@ const home = require('./view.js')
 
 const app = choo()
 app.route('/', home)
+app.route('/rango-da-matilha', home)
 app.mount('#rango')
 
 },{"./view.js":33,"choo":3,"choo/html":2}],33:[function(require,module,exports){

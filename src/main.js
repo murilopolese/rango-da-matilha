@@ -4,4 +4,5 @@ const home = require('./view.js')
 
 const app = choo()
 app.route('/', home)
+app.route('/rango-da-matilha', home)
 app.mount('#rango')
