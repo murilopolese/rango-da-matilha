@@ -37,6 +37,15 @@ a:active {
   color: var(--primary);
 }
 
+.revelar {
+	opacity: 1;
+	transition: 1s;
+}
+*[data-visivel="false"] {
+	opacity: 0 !important;
+	transform: translateY(4em);
+}
+
 /* MENU */
 
 #menu {
@@ -128,6 +137,7 @@ a:active {
   font-weight: 300;
   font-size: 7vw;
   padding: 0 1em;
+  text-align: center;
 }
 #vitrine .texto em {
   color: var(--primary);
@@ -153,6 +163,7 @@ a:active {
   #vitrine .texto,
   #vitrine .imagem {
     width: 50%;
+    text-align: left;
   }
   #vitrine .texto {
     font-size: min(36px, 3.2vw);
@@ -262,7 +273,7 @@ a:active {
   position: relative;
 }
 #passos .item .icone {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 #passos .item h3 {
@@ -340,6 +351,26 @@ a:active {
     padding: 1em;
   }
 }
+
+#contato {
+  max-width: 960px;
+  margin: 10vh auto 20vh auto;
+  text-align: center;
+  padding: 0 1em;
+}
+#contato .link {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.2em 0.4em;
+  border-radius: 1em;
+  font-size: 2rem;
+  display: inline-block;
+  transition: all 0.25s;
+  text-transform: uppercase;
+}
+#contato .link:hover {
+  transform: scale(1.05);
+}
 </style>
   </head>
   <body>
@@ -395,39 +426,39 @@ a:active {
     </div>
   
       
-    <div id="produto">
+    <div id="produto" class="revelar">
       
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src="produto_congelado.svg" alt="PORÇÃO CONGELADA E EMBALADA A VÁCUO" />
       <h3>PORÇÃO CONGELADA E EMBALADA A VÁCUO</h3>
       <p>É SÓ DESCONGELAR A PORÇÃO DIÁRIA NA PARTE BAIXA DA GELADEIRA E SERVIR EM 2 OU 3 REFEIÇÕES. PODE SERVIR GELADA OU MORNINHA.</p>
     </div>
     
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src="produto_vegetais.svg" alt="VEGETAIS DA FEIRA" />
       <h3>VEGETAIS DA FEIRA</h3>
       <p>VEGETAIS SELECIONADOS E COMBINADOS DE MANEIRA NUTRITIVA E SEGURA PARA GARANTIR TODOS OS NUTRIENTES PARA O SEU CACHORRO.</p>
     </div>
     
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src="produto_carne.svg" alt="CARNE FRESCA DO AÇOUGUE" />
       <h3>CARNE FRESCA DO AÇOUGUE</h3>
       <p>UMA AMPLA VARIEDADE DE PROTEÍNAS DE DIFERENTES ANIMAIS, PARA ATENDER NECESSIDADES DOS PELUDOS MAIS EXIGENTES.</p>
     </div>
     
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src="produto_delivery.svg" alt="DELIVERY EM TODA GRANDE VITÓRIA" />
       <h3>DELIVERY EM TODA GRANDE VITÓRIA</h3>
       <p>CHEGA NA SUA CASA EM DIAS FIXOS DE ENTREGA. ANTES DE ACABAR, NÓS RENOVAREMOS O SEU ESTOQUE DE RANGO. VOCÊ TAMBÉM PODE AGENDAR UMA ENTREGA EM HORÁRIO ESPECIAL NA SUA CASA.</p>
     </div>
     
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src="produto_sem_conservante.svg" alt="LIVRE DE CONSERVANTES, CORANTES E OUTROS" />
       <h3>LIVRE DE CONSERVANTES, CORANTES E OUTROS</h3>
       <p>PALATABILIZANTES, TRANSGÊNICOS, ANTIDIOXIDANTES, ANTIUMECTANTES E OUTROS PALAVRÕES VOCÊ SÓ VAI VER AQUI. EM NOSSO PRODUTO, NÃO.</p>
     </div>
     
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src="produto_veterinaria.svg" alt="SUPERVISÃO VETERINÁRIA" />
       <h3>SUPERVISÃO VETERINÁRIA</h3>
       <p>UMA SUPER VETERINÁRIA NA EQUIPE PARA BALANCEAR AS DIETAS E GARANTIR QUE TODOS OS PROCESSOS E INGREDIENTES SÃO ADEQUADOS PARA OS DOGS.</p>
@@ -436,7 +467,7 @@ a:active {
     </div>
   
       
-  <div id="reforco">
+  <div id="reforco" class="revelar">
     <img src="foto_cachorro_redondo.png" alt="Beagle"/>
     <p>
       SEU CACHORRO É <em>ÚNICO</em>.<br>
@@ -449,40 +480,40 @@ a:active {
   </div>
   
       
-    <div id="passos">
+    <div id="passos" class="revelar">
       <h2>Como funciona?</h2>
       
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">0</span>
         <img class="icone" src="1_FORM.svg" alt="" />
         <p>PREENCHA O <a href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">FORMULÁRIO</a> COM AS INFORMAÇÕES DO SEU CÃOZINHO</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">1</span>
         <img class="icone" src="2_CALC.svg" alt="" />
         <p>NOSSA EQUIPE VAI CALCULAR A PORÇÃO DIÁRIA DE RANGO E ESCOLHER AS RECEITAS MAIS ADEQUADAS</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">2</span>
         <img class="icone" src="3_WHATS.svg" alt="" />
         <p>VOCÊ RECEBERÁ UM ORÇAMENTO POR WHATSAPP COM OPÇÕES DO COMBO 15 OU 30 PORÇÕES</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">3</span>
         <img class="icone" src="4_PGTO.svg" alt="" />
         <p>VOCÊ REALIZA O PAGAMENTO VIA BOLETO, PICPAY OU TRANSFERÊNCIA</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">4</span>
         <img class="icone" src="5_PANELA.svg" alt="" />
         <p>NÓS PRODUZIMOS O RANGO PERSONALIZADO PARA SEU CÃOZINHO E ENTREGAMOS CONGELADO NA SUA CASA.</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">5</span>
         <img class="icone" src="6_POTECOMIDA.svg" alt="" />
         <p>VOCÊ SÓ PRECISA DESCONGELAR E SERVIR PARA O SEU CÃOZINHO! ANTES DE ACABAR, ENTRAREMOS EM CONTATO PARA AGENDAR UMA NOVA ENTREGA.</p>
@@ -491,20 +522,20 @@ a:active {
     </div>
   
       
-    <div id="perguntas">
+    <div id="perguntas" class="revelar">
       <h2>Principais Duvidas</h2>
       
-      <div class="item">
+      <div class="item revelar">
         <img src="fora_do_peso.svg" alt="" />
         <p><span>R:</span>TEMOS RECEITAS COM CORTES MAGROS E SEM CARBOIDRATOS. ALÉM DISSO, AS PORÇÕES SÃO CALCULADAS PARA QUE SEU CÃO PERCA PESO DE MANEIRA NUTRITIVA E SAUDÁVEL!</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <img src="alergias.svg" alt="" />
         <p><span>R:</span>TRABALHAMOS COM UMA GRANDE VARIEDADE DE INGREDIENTES PARA CONTORNAR ESSA SITUAÇÃO. SE NÃO TIVERMOS UMA RECEITA QUE SE ENCAIXE PARA ELE, NÓS IREMOS INVENTÁ-LA! (COM O AVAL DE UM VETERINÁRIO, É CLARO!)</p>
       </div>
     
-      <div class="item">
+      <div class="item revelar">
         <img src="sem_apetite.svg" alt="" />
         <p><span>R:</span>MAS SEMPRE QUER COMER DA SUA COMIDA, CERTO? O PROBLEMA É QUE ELA NÃO E SEGURA PARA ELE. O RANGO É COMIDA DE VERDADE COMO A SUA, MAS BALANCEADA ESPECIFICAMENTE PARA O SEU CACHORRO!</p>
       </div>
@@ -512,6 +543,12 @@ a:active {
     </div>
   
       
+    <div id="contato" class="revelar">
+      <a class="link" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">
+        Solicite um Orçamento
+      </a>
+    </div>
+  
     </div>
   
   <script type="text/javascript">(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
@@ -2812,6 +2849,29 @@ app.route('/', home)
 app.route('/rango-da-matilha', home)
 app.mount('#rango')
 
+const isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
+    return bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
+};
+const scan = function() {
+  const articles = document.querySelectorAll('.revelar')
+  for (let i = 0; i < articles.length; i++) {
+    let article = articles.item(i)
+    article.setAttribute('data-visivel', isInViewport(article))
+  }
+}
+
+window.onload = function() {
+  // const articles = document.querySelectorAll('.revelar')
+  // // Hide all articles
+  // for (let i = 0; i < articles.length; i++) {
+  //   articles[i].setAttribute('data-visivel', false)
+  // }
+  scan()
+  window.addEventListener('scroll', scan)
+  window.addEventListener('resize', scan)
+}
+
 },{"./view.js":35,"choo":4,"choo/html":2}],35:[function(require,module,exports){
 const html = require('choo/html')
 const raw = require('choo/html/raw')
@@ -2902,7 +2962,7 @@ function produto() {
   const items = require('./content/product.json')
   function item(imagem, titulo, texto) {
     return html`
-    <div class="item">
+    <div class="item revelar">
       <img class="icone" src=${imagem} alt=${titulo} />
       <h3>${titulo}</h3>
       <p>${texto}</p>
@@ -2910,7 +2970,7 @@ function produto() {
     `
   }
   return html`
-    <div id="produto">
+    <div id="produto" class="revelar">
       ${items.map((i) => item(i.imagem, i.titulo, i.texto))}
     </div>
   `
@@ -2918,7 +2978,7 @@ function produto() {
 
 function reforco() {
   return html`
-  <div id="reforco">
+  <div id="reforco" class="revelar">
     <img src="foto_cachorro_redondo.png" alt="Beagle"/>
     <p>
       SEU CACHORRO É <em>ÚNICO</em>.<br>
@@ -2936,7 +2996,7 @@ function passoapasso() {
   const items = require('./content/passo-a-passo.json')
   function item(n, imagem, texto, alt) {
     return html`
-      <div class="item">
+      <div class="item revelar">
         <span class="numero">${n}</span>
         <img class="icone" src=${imagem} alt=${alt} />
         <p>${raw(texto)}</p>
@@ -2944,7 +3004,7 @@ function passoapasso() {
     `
   }
   return html`
-    <div id="passos">
+    <div id="passos" class="revelar">
       <h2>Como funciona?</h2>
       ${items.map((i, n) => item(n, i.imagem, i.texto))}
     </div>
@@ -2955,21 +3015,29 @@ function perguntas() {
   const items = require('./content/perguntas.json')
   function item(imagem, texto, alt) {
     return html`
-      <div class="item">
+      <div class="item revelar">
         <img src=${imagem} alt=${alt} />
         <p><span>R:</span>${texto}</p>
       </div>
     `
   }
   return html`
-    <div id="perguntas">
+    <div id="perguntas" class="revelar">
       <h2>Principais Duvidas</h2>
       ${items.map((i) => item(i.imagem, i.texto))}
     </div>
   `
 }
 
-function contato() {}
+function contato() {
+  return html`
+    <div id="contato" class="revelar">
+      <a class="link" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">
+        Solicite um Orçamento
+      </a>
+    </div>
+  `
+}
 
 },{"./content/passo-a-passo.json":31,"./content/perguntas.json":32,"./content/product.json":33,"choo/html":2,"choo/html/raw":3}]},{},[34]);
 </script>
