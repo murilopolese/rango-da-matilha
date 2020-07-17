@@ -2296,6 +2296,29 @@ app.route('/', home)
 app.route('/rango-da-matilha', home)
 app.mount('#rango')
 
+const isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
+    return bounding.top <= (window.innerHeight || document.documentElement.clientHeight)
+};
+const scan = function() {
+  const articles = document.querySelectorAll('.reveal')
+  for (let i = 0; i < articles.length; i++) {
+    let article = articles.item(i)
+    article.setAttribute('data-visible', isInViewport(article))
+  }
+}
+
+window.onload = function() {
+  const articles = document.querySelectorAll('.reveal')
+  // Hide all articles
+  for (let i = 0; i < articles.length; i++) {
+    articles[i].setAttribute('data-visible', false)
+  }
+  scan()
+  window.addEventListener('scroll', scan)
+  window.addEventListener('resize', scan)
+}
+
 },{"./view.js":35,"choo":4,"choo/html":2}],35:[function(require,module,exports){
 const html = require('choo/html')
 const raw = require('choo/html/raw')
@@ -2386,7 +2409,7 @@ function produto() {
   const items = require('./content/product.json')
   function item(imagem, titulo, texto) {
     return html`
-    <div class="item">
+    <div class="item reveal">
       <img class="icone" src=${imagem} alt=${titulo} />
       <h3>${titulo}</h3>
       <p>${texto}</p>
@@ -2394,7 +2417,7 @@ function produto() {
     `
   }
   return html`
-    <div id="produto">
+    <div id="produto" class="reveal">
       ${items.map((i) => item(i.imagem, i.titulo, i.texto))}
     </div>
   `
@@ -2402,7 +2425,7 @@ function produto() {
 
 function reforco() {
   return html`
-  <div id="reforco">
+  <div id="reforco" class="reveal">
     <img src="foto_cachorro_redondo.png" alt="Beagle"/>
     <p>
       SEU CACHORRO É <em>ÚNICO</em>.<br>
@@ -2420,7 +2443,7 @@ function passoapasso() {
   const items = require('./content/passo-a-passo.json')
   function item(n, imagem, texto, alt) {
     return html`
-      <div class="item">
+      <div class="item reveal">
         <span class="numero">${n}</span>
         <img class="icone" src=${imagem} alt=${alt} />
         <p>${raw(texto)}</p>
@@ -2428,7 +2451,7 @@ function passoapasso() {
     `
   }
   return html`
-    <div id="passos">
+    <div id="passos" class="reveal">
       <h2>Como funciona?</h2>
       ${items.map((i, n) => item(n, i.imagem, i.texto))}
     </div>
@@ -2439,20 +2462,28 @@ function perguntas() {
   const items = require('./content/perguntas.json')
   function item(imagem, texto, alt) {
     return html`
-      <div class="item">
+      <div class="item reveal">
         <img src=${imagem} alt=${alt} />
         <p><span>R:</span>${texto}</p>
       </div>
     `
   }
   return html`
-    <div id="perguntas">
+    <div id="perguntas" class="reveal">
       <h2>Principais Duvidas</h2>
       ${items.map((i) => item(i.imagem, i.texto))}
     </div>
   `
 }
 
-function contato() {}
+function contato() {
+  return html`
+    <div id="contato" class="reveal">
+      <a class="link" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">
+        Solicite um Orçamento
+      </a>
+    </div>
+  `
+}
 
 },{"./content/passo-a-passo.json":31,"./content/perguntas.json":32,"./content/product.json":33,"choo/html":2,"choo/html/raw":3}]},{},[34]);

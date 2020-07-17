@@ -29,6 +29,15 @@ a:active {
   color: var(--primary);
 }
 
+.reveal {
+	opacity: 1;
+	transition: 1s;
+}
+*[data-visible="false"] {
+	opacity: 0 !important;
+	transform: translateY(4em);
+}
+
 /* MENU */
 
 #menu {
@@ -120,6 +129,7 @@ a:active {
   font-weight: 300;
   font-size: 7vw;
   padding: 0 1em;
+  text-align: center;
 }
 #vitrine .texto em {
   color: var(--primary);
@@ -145,6 +155,7 @@ a:active {
   #vitrine .texto,
   #vitrine .imagem {
     width: 50%;
+    text-align: left;
   }
   #vitrine .texto {
     font-size: min(36px, 3.2vw);
@@ -254,7 +265,7 @@ a:active {
   position: relative;
 }
 #passos .item .icone {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 #passos .item h3 {
@@ -331,4 +342,24 @@ a:active {
     width: 33%;
     padding: 1em;
   }
+}
+
+#contato {
+  max-width: 960px;
+  margin: 10vh auto 20vh auto;
+  text-align: center;
+  padding: 0 1em;
+}
+#contato .link {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.2em 0.4em;
+  border-radius: 1em;
+  font-size: 2rem;
+  display: inline-block;
+  transition: all 0.25s;
+  text-transform: uppercase;
+}
+#contato .link:hover {
+  transform: scale(1.05);
 }
