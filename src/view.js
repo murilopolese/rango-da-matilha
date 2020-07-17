@@ -1,4 +1,5 @@
 const html = require('choo/html')
+const raw = require('choo/html/raw')
 module.exports = (state, emit) => {
   return html`
     <div id="rango">
@@ -33,7 +34,7 @@ function capa() {
         <img src="logo.png" alt="Rango da Matilha: Alimentação Natural para Pets" />
       </li>
       <li class="link">
-        <a class="pink" href="#orcamento" onclick=${scrollTo}>Orçamento</a>
+        <a class="pink" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">Orçamento</a>
       </li>
       <li class="link">
         <a href="#passos" onclick=${scrollTo}>Como funciona</a>
@@ -44,7 +45,7 @@ function capa() {
       <li class="link">
         <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">Whatsapp</a>
         <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">
-          <img class="icon" src="3_WHATS.svg" alt="Whatsapp" />
+          <img class="icone" src="3_WHATS.svg" alt="Whatsapp" />
         </a>
       </li>
       <li class="selo">
@@ -87,7 +88,7 @@ function produto() {
   function item(imagem, titulo, texto) {
     return html`
     <div class="item">
-      <img class="icon" src=${imagem} alt=${titulo} />
+      <img class="icone" src=${imagem} alt=${titulo} />
       <h3>${titulo}</h3>
       <p>${texto}</p>
     </div>
@@ -118,17 +119,19 @@ function reforco() {
 
 function passoapasso() {
   const items = require('./content/passo-a-passo.json')
-  function item(imagem, texto, alt) {
+  function item(n, imagem, texto, alt) {
     return html`
       <div class="item">
-        <img class="icon" src=${imagem} alt=${alt} />
-        <p>${texto}</p>
+        <span class="numero">${n}</span>
+        <img class="icone" src=${imagem} alt=${alt} />
+        <p>${raw(texto)}</p>
       </div>
     `
   }
   return html`
     <div id="passos">
-      ${items.map((i) => item(i.imagem, i.texto))}
+      <h2>Como funciona?</h2>
+      ${items.map((i, n) => item(n, i.imagem, i.texto))}
     </div>
   `
 }
@@ -145,6 +148,7 @@ function perguntas() {
   }
   return html`
     <div id="perguntas">
+      <h2>Principais Duvidas</h2>
       ${items.map((i) => item(i.imagem, i.texto))}
     </div>
   `

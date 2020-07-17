@@ -41,10 +41,13 @@ function newCall (Cls) {
   return new (Cls.bind.apply(Cls, arguments)) // eslint-disable-line
 }
 
-},{"assert":7,"nanolru":16}],2:[function(require,module,exports){
+},{"assert":8,"nanolru":18}],2:[function(require,module,exports){
 module.exports = require('nanohtml')
 
-},{"nanohtml":12}],3:[function(require,module,exports){
+},{"nanohtml":13}],3:[function(require,module,exports){
+module.exports = require('nanohtml/raw')
+
+},{"nanohtml/raw":16}],4:[function(require,module,exports){
 var scrollToAnchor = require('scroll-to-anchor')
 var documentReady = require('document-ready')
 var nanotiming = require('nanotiming')
@@ -328,7 +331,7 @@ Choo.prototype._setCache = function (state) {
   }
 }
 
-},{"./component/cache":1,"assert":7,"document-ready":4,"nanobus":8,"nanohref":9,"nanomorph":17,"nanoquery":20,"nanoraf":21,"nanorouter":22,"nanotiming":24,"scroll-to-anchor":26}],4:[function(require,module,exports){
+},{"./component/cache":1,"assert":8,"document-ready":5,"nanobus":9,"nanohref":10,"nanomorph":19,"nanoquery":22,"nanoraf":23,"nanorouter":24,"nanotiming":26,"scroll-to-anchor":28}],5:[function(require,module,exports){
 'use strict'
 
 module.exports = ready
@@ -347,7 +350,7 @@ function ready (callback) {
   })
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 module.exports = attributeToProperty
 
 var transform = {
@@ -368,7 +371,7 @@ function attributeToProperty (h) {
   }
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var attrToProp = require('hyperscript-attribute-to-property')
 
 var VAR = 0, TEXT = 1, OPEN = 2, CLOSE = 3, ATTR = 4
@@ -665,7 +668,7 @@ var closeRE = RegExp('^(' + [
 ].join('|') + ')(?:[\.#][a-zA-Z0-9\u007F-\uFFFF_:-]+)*$')
 function selfClosing (tag) { return closeRE.test(tag) }
 
-},{"hyperscript-attribute-to-property":5}],7:[function(require,module,exports){
+},{"hyperscript-attribute-to-property":6}],8:[function(require,module,exports){
 assert.notEqual = notEqual
 assert.notOk = notOk
 assert.equal = equal
@@ -689,7 +692,7 @@ function assert (t, m) {
   if (!t) throw new Error(m || 'AssertionError')
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 var splice = require('remove-array-items')
 var nanotiming = require('nanotiming')
 var assert = require('assert')
@@ -853,7 +856,7 @@ Nanobus.prototype._emit = function (arr, eventName, data, uuid) {
   }
 }
 
-},{"assert":7,"nanotiming":24,"remove-array-items":25}],9:[function(require,module,exports){
+},{"assert":8,"nanotiming":26,"remove-array-items":27}],10:[function(require,module,exports){
 var assert = require('assert')
 
 var safeExternalLink = /(noopener|noreferrer) (noopener|noreferrer)/
@@ -898,7 +901,7 @@ function href (cb, root) {
   })
 }
 
-},{"assert":7}],10:[function(require,module,exports){
+},{"assert":8}],11:[function(require,module,exports){
 'use strict'
 
 var trailingNewlineRegex = /\n[\s]+$/
@@ -1032,7 +1035,7 @@ module.exports = function appendChild (el, childs) {
   }
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict'
 
 module.exports = [
@@ -1042,17 +1045,17 @@ module.exports = [
   'readonly', 'required', 'reversed', 'selected'
 ]
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = require('./dom')(document)
 
-},{"./dom":14}],13:[function(require,module,exports){
+},{"./dom":15}],14:[function(require,module,exports){
 'use strict'
 
 module.exports = [
   'indeterminate'
 ]
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 'use strict'
 
 var hyperx = require('hyperx')
@@ -1170,7 +1173,22 @@ module.exports = function (document) {
   return exports
 }
 
-},{"./append-child":10,"./bool-props":11,"./direct-props":13,"./svg-tags":15,"hyperx":6}],15:[function(require,module,exports){
+},{"./append-child":11,"./bool-props":12,"./direct-props":14,"./svg-tags":17,"hyperx":7}],16:[function(require,module,exports){
+'use strict'
+
+function nanohtmlRawBrowser (tag) {
+  var el = document.createElement('div')
+  el.innerHTML = tag
+  return toArray(el.childNodes)
+}
+
+function toArray (arr) {
+  return Array.isArray(arr) ? arr : [].slice.call(arr)
+}
+
+module.exports = nanohtmlRawBrowser
+
+},{}],17:[function(require,module,exports){
 'use strict'
 
 module.exports = [
@@ -1190,7 +1208,7 @@ module.exports = [
   'tspan', 'use', 'view', 'vkern'
 ]
 
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 module.exports = LRU
 
 function LRU (opts) {
@@ -1328,7 +1346,7 @@ LRU.prototype.evict = function () {
   this.remove(this.tail)
 }
 
-},{}],17:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 var assert = require('nanoassert')
 var morph = require('./lib/morph')
 
@@ -1493,7 +1511,7 @@ function same (a, b) {
   return false
 }
 
-},{"./lib/morph":19,"nanoassert":7}],18:[function(require,module,exports){
+},{"./lib/morph":21,"nanoassert":8}],20:[function(require,module,exports){
 module.exports = [
   // attribute events (can be set with attributes)
   'onclick',
@@ -1537,7 +1555,7 @@ module.exports = [
   'onfocusout'
 ]
 
-},{}],19:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 var events = require('./events')
 var eventsLength = events.length
 
@@ -1709,7 +1727,7 @@ function updateAttribute (newNode, oldNode, name) {
   }
 }
 
-},{"./events":18}],20:[function(require,module,exports){
+},{"./events":20}],22:[function(require,module,exports){
 var reg = /([^?=&]+)(=([^&]*))?/g
 var assert = require('assert')
 
@@ -1733,7 +1751,7 @@ function qs (url) {
   return obj
 }
 
-},{"assert":7}],21:[function(require,module,exports){
+},{"assert":8}],23:[function(require,module,exports){
 'use strict'
 
 var assert = require('assert')
@@ -1770,7 +1788,7 @@ function nanoraf (render, raf) {
   }
 }
 
-},{"assert":7}],22:[function(require,module,exports){
+},{"assert":8}],24:[function(require,module,exports){
 var assert = require('assert')
 var wayfarer = require('wayfarer')
 
@@ -1826,7 +1844,7 @@ function pathname (routename, isElectron) {
   return decodeURI(routename.replace(suffix, '').replace(normalize, '/'))
 }
 
-},{"assert":7,"wayfarer":27}],23:[function(require,module,exports){
+},{"assert":8,"wayfarer":29}],25:[function(require,module,exports){
 var assert = require('assert')
 
 var hasWindow = typeof window !== 'undefined'
@@ -1883,7 +1901,7 @@ NanoScheduler.prototype.setTimeout = function (cb) {
 
 module.exports = createScheduler
 
-},{"assert":7}],24:[function(require,module,exports){
+},{"assert":8}],26:[function(require,module,exports){
 var scheduler = require('nanoscheduler')()
 var assert = require('assert')
 
@@ -1933,7 +1951,7 @@ function noop (cb) {
   }
 }
 
-},{"assert":7,"nanoscheduler":23}],25:[function(require,module,exports){
+},{"assert":8,"nanoscheduler":25}],27:[function(require,module,exports){
 'use strict'
 
 /**
@@ -1962,7 +1980,7 @@ module.exports = function removeItems (arr, startIdx, removeCount) {
   arr.length = len
 }
 
-},{}],26:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 module.exports = scrollToAnchor
 
 function scrollToAnchor (anchor, options) {
@@ -1974,7 +1992,7 @@ function scrollToAnchor (anchor, options) {
   }
 }
 
-},{}],27:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var assert = require('assert')
 var trie = require('./trie')
@@ -2049,7 +2067,7 @@ function Wayfarer (dft) {
   }
 }
 
-},{"./trie":28,"assert":7}],28:[function(require,module,exports){
+},{"./trie":30,"assert":8}],30:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var assert = require('assert')
 
@@ -2190,11 +2208,11 @@ function has (object, property) {
   return Object.prototype.hasOwnProperty.call(object, property)
 }
 
-},{"assert":7}],29:[function(require,module,exports){
+},{"assert":8}],31:[function(require,module,exports){
 module.exports=[
   {
     "imagem": "1_FORM.svg",
-    "texto": "PREENCHA O FORMULÁRIO COM AS INFORMAÇÕES DO SEU CÃOZINHO"
+    "texto": "PREENCHA O <a href=\"https://bit.ly/OrcamentoSiteRango\" target=\"_blank\" rel=\"noopener noreferer\">FORMULÁRIO</a> COM AS INFORMAÇÕES DO SEU CÃOZINHO"
   },
   {
     "imagem": "2_CALC.svg",
@@ -2218,7 +2236,7 @@ module.exports=[
   }
 ]
 
-},{}],30:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 module.exports=[
   {
     "imagem": "fora_do_peso.svg",
@@ -2234,7 +2252,7 @@ module.exports=[
   }
 ]
 
-},{}],31:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 module.exports=[
   {
     "imagem": "produto_congelado.svg",
@@ -2268,7 +2286,7 @@ module.exports=[
   }
 ]
 
-},{}],32:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 const choo = require('choo')
 const html = require('choo/html')
 const home = require('./view.js')
@@ -2278,8 +2296,9 @@ app.route('/', home)
 app.route('/rango-da-matilha', home)
 app.mount('#rango')
 
-},{"./view.js":33,"choo":3,"choo/html":2}],33:[function(require,module,exports){
+},{"./view.js":35,"choo":4,"choo/html":2}],35:[function(require,module,exports){
 const html = require('choo/html')
+const raw = require('choo/html/raw')
 module.exports = (state, emit) => {
   return html`
     <div id="rango">
@@ -2314,7 +2333,7 @@ function capa() {
         <img src="logo.png" alt="Rango da Matilha: Alimentação Natural para Pets" />
       </li>
       <li class="link">
-        <a class="pink" href="#orcamento" onclick=${scrollTo}>Orçamento</a>
+        <a class="pink" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">Orçamento</a>
       </li>
       <li class="link">
         <a href="#passos" onclick=${scrollTo}>Como funciona</a>
@@ -2325,7 +2344,7 @@ function capa() {
       <li class="link">
         <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">Whatsapp</a>
         <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">
-          <img class="icon" src="3_WHATS.svg" alt="Whatsapp" />
+          <img class="icone" src="3_WHATS.svg" alt="Whatsapp" />
         </a>
       </li>
       <li class="selo">
@@ -2368,7 +2387,7 @@ function produto() {
   function item(imagem, titulo, texto) {
     return html`
     <div class="item">
-      <img class="icon" src=${imagem} alt=${titulo} />
+      <img class="icone" src=${imagem} alt=${titulo} />
       <h3>${titulo}</h3>
       <p>${texto}</p>
     </div>
@@ -2399,17 +2418,19 @@ function reforco() {
 
 function passoapasso() {
   const items = require('./content/passo-a-passo.json')
-  function item(imagem, texto, alt) {
+  function item(n, imagem, texto, alt) {
     return html`
       <div class="item">
-        <img class="icon" src=${imagem} alt=${alt} />
-        <p>${texto}</p>
+        <span class="numero">${n}</span>
+        <img class="icone" src=${imagem} alt=${alt} />
+        <p>${raw(texto)}</p>
       </div>
     `
   }
   return html`
     <div id="passos">
-      ${items.map((i) => item(i.imagem, i.texto))}
+      <h2>Como funciona?</h2>
+      ${items.map((i, n) => item(n, i.imagem, i.texto))}
     </div>
   `
 }
@@ -2426,6 +2447,7 @@ function perguntas() {
   }
   return html`
     <div id="perguntas">
+      <h2>Principais Duvidas</h2>
       ${items.map((i) => item(i.imagem, i.texto))}
     </div>
   `
@@ -2433,4 +2455,4 @@ function perguntas() {
 
 function contato() {}
 
-},{"./content/passo-a-passo.json":29,"./content/perguntas.json":30,"./content/product.json":31,"choo/html":2}]},{},[32]);
+},{"./content/passo-a-passo.json":31,"./content/perguntas.json":32,"./content/product.json":33,"choo/html":2,"choo/html/raw":3}]},{},[34]);
