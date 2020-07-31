@@ -61,7 +61,19 @@ const htmlTemplate = function(content) {
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <link rel="icon" type="image/png" href="logo_icon.png">
+
+  <meta name="description" content="Alimentação natural para pets">
+  <meta name="keywords" content="Alimentação, Natural, Pets, Animais de estimação">
+  <meta name="author" content="Rango da Matilha">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rango da Matilha">
+  <meta property="og:description" content="Alimentação natural para pets.">
+  <meta property="og:image" content="http://murilopolese.github.io/rango-da-matilha/foto_rango_share.png">
+  <meta property="og:card" content="http://murilopolese.github.io/rango-da-matilha/foto_rango_share.png">
+  <meta property="og:url" content="http://murilopolese.github.io/rango-da-matilha">
+
+  <link rel="icon" type="image/png" href="http://murilopolese.github.io/rango-da-matilha/logo_icon.png">
   <title>Rango da Matilha</title>
   <style>${styleString}</style>
   </head>

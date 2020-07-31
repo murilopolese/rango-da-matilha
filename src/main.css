@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@keyframes enterRight {
+  from {transform: translate(100%, 0); opacity: 0;}
+  to {transform: translate(0%, 0); opacity: 1;}
+}
+
+@keyframes enterLeft {
+  from {transform: translate(-100%, 0); opacity: 0;}
+  to {transform: translate(0%, 0); opacity: 1;}
+}
+
+@keyframes enterDown {
+  from {transform: translate(0, -100%); opacity: 0;}
+  to {transform: translate(0, 0); opacity: 1;}
+}
+
 * {
   box-sizing: border-box;
 }
@@ -152,11 +168,11 @@ a:active {
 
 @media screen and (min-width: 600px) {
   #vitrine {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-betwen;
+    justify-content: space-between;
     align-items: center;
   }
   #vitrine .texto,
@@ -166,6 +182,16 @@ a:active {
   }
   #vitrine .texto {
     font-size: min(36px, 3.2vw);
+    animation: enterLeft 0.5s 1;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  #vitrine .imagem {
+    animation: enterRight 0.5s 1;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
   }
 }
 
@@ -190,6 +216,7 @@ a:active {
 #produto .item h3 {
   font-weight: bold;
   line-height: 1em;
+  min-height: 2em;
 }
 #produto .item p {
   font-weight: 300;
@@ -376,4 +403,9 @@ a:active {
   bottom: 3%;
   right: 1%;
   width: min(100px, 20%);
+  transition: all 0.1s;
+}
+
+#flutuante:hover {
+  transform: scale(1.05);
 }

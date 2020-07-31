@@ -2387,7 +2387,7 @@ function capa() {
           </p>
         </div>
         <div class="imagem">
-          <img src="foto_rango.png" alt="Foto do rango: Proteínas, Carboidratos, Vísceras, Vegetais e Suplementos" />
+          <img src="foto_rango_recortada.png" alt="Foto do rango: Proteínas, Carboidratos, Vísceras, Vegetais e Suplementos" />
         </div>
       </div>
     `
@@ -2448,7 +2448,7 @@ function passoapasso() {
   }
   return html`
     <div id="passos" class="revelar">
-      <h2>Como funciona?</h2>
+      <h2><img src="como_funciona.svg" alt="Como Funciona?" /></h2>
       ${items.map((i, n) => item(n, i.imagem, i.texto))}
     </div>
   `
@@ -2466,7 +2466,7 @@ function perguntas() {
   }
   return html`
     <div id="perguntas" class="revelar">
-      <h2>Principais Duvidas</h2>
+      <h2><img src="principais_duvidas.svg" alt="Principais dúvidas" /></h2>
       ${items.map((i) => item(i.imagem, i.texto))}
     </div>
   `
