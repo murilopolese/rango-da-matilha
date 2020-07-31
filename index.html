@@ -19,6 +19,22 @@
   <link rel="icon" type="image/png" href="http://murilopolese.github.io/rango-da-matilha/logo_icon.png">
   <title>Rango da Matilha</title>
   <style>@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@keyframes enterRight {
+  from {transform: translate(100%, 0); opacity: 0;}
+  to {transform: translate(0%, 0); opacity: 1;}
+}
+
+@keyframes enterLeft {
+  from {transform: translate(-100%, 0); opacity: 0;}
+  to {transform: translate(0%, 0); opacity: 1;}
+}
+
+@keyframes enterDown {
+  from {transform: translate(0, -100%); opacity: 0;}
+  to {transform: translate(0, 0); opacity: 1;}
+}
+
 * {
   box-sizing: border-box;
 }
@@ -73,6 +89,11 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  animation: enterDown 0.5s 1;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 #menu .logo {
   width: 80%;
@@ -151,12 +172,20 @@ a:active {
 }
 #vitrine img {
   max-width: 100%;
+  animation: enterRight 0.5s 1;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 #vitrine .texto {
   font-weight: 300;
   font-size: 7vw;
   padding: 0 1em;
   text-align: center;
+  animation: enterLeft 0.5s 1;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 #vitrine .texto em {
   color: var(--primary);
