@@ -69,17 +69,26 @@ const htmlTemplate = function(content) {
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rango da Matilha">
   <meta property="og:description" content="Alimentação natural para pets.">
-  <meta property="og:image" content="http://murilopolese.github.io/rango-da-matilha/foto_rango_share.png">
-  <meta property="og:card" content="http://murilopolese.github.io/rango-da-matilha/foto_rango_share.png">
-  <meta property="og:url" content="http://murilopolese.github.io/rango-da-matilha">
+  <meta property="og:image" content="http://www.rangodamatilha.com.br/foto_rango_share.png">
+  <meta property="og:card" content="http://www.rangodamatilha.com.br/foto_rango_share.png">
+  <meta property="og:url" content="http://www.rangodamatilha.com.br">
 
-  <link rel="icon" type="image/png" href="http://murilopolese.github.io/rango-da-matilha/logo_icon.png">
+  <link rel="icon" type="image/png" href="http://www.rangodamatilha.com.br/logo_icon.png">
   <title>Rango da Matilha</title>
   <style>${styleString}</style>
   </head>
   <body>
   ${content}
   <script type="text/javascript">${javascriptString}</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174218020-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-174218020-1');
+  </script>
   </body>
   </html>
   `
@@ -110,5 +119,9 @@ async function build() {
 }
 
 build()
-.then(() => console.log('done'))
+.then(() => {
+  console.log('done')
+  console.log(`deploy with: `)
+  console.log(`aws s3 sync ./dist/ s3://www.rangodamatilha.com.br/ --exclude '.*' --acl public-read`)
+})
 .catch((e) => console.log(e))
