@@ -92,6 +92,7 @@ a:active {
   justify-content: center;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 6vw;
   font-size: min(22px, 6vw);
   margin: 0.5em 0;
   height: 1em;
@@ -135,6 +136,7 @@ a:active {
     width: 8%;
   }
   #menu .link {
+    font-size: 1.5vw;
     font-size: min(18px, 1.5vw);
   }
 }
@@ -181,6 +183,7 @@ a:active {
     text-align: left;
   }
   #vitrine .texto {
+    font-size: 3.2vw;
     font-size: min(36px, 3.2vw);
     animation: enterLeft 0.5s 1;
     animation-delay: 0.2s;
@@ -238,6 +241,7 @@ a:active {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
+  font-size: 4.5vw;
   font-size: min(42px, 4.5vw);
   text-align: right;
   overflow: hidden;
@@ -402,6 +406,7 @@ a:active {
   position: fixed;
   bottom: 3%;
   right: 1%;
+  width: 20%;
   width: min(100px, 20%);
   transition: all 0.1s;
 }
