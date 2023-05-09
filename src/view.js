@@ -35,7 +35,7 @@ function capa() {
         <img src="logo.png" alt="Rango da Matilha: Alimentação Natural para Pets" />
       </li>
       <li class="link">
-        <a class="pink" href="https://bit.ly/OrcamentoSiteRango" target="_blank" rel="noopener noreferer">Orçamento</a>
+        <a href="http://bit.ly/RangoZap" target="_blank" rel="noopener noreferer">Orçamento</a>
       </li>
       <li class="link">
         <a href="#passos" onclick=${scrollTo}>Como funciona</a>
